@@ -1,0 +1,70 @@
+$primary: #949494;
+$font-size: 20px;
+@mixin button($color) {
+    padding: 15px 25px;
+    background: $color;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+// Вложенный элемент карточки
+body
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url("fon.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    flex: 1 0 auto;
+    padding: 0 !important;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgb(255, 255, 255);
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.card {
+    list-style: none;
+    background: linear-gradient(135deg, #161616e3 0%, #020202e3 100%);
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(32, 30, 30, 0.788);
+    transition: transform 0.3s ease;
+    min-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    &-title {
+        margin: 0;
+        font-size: 40px;
+        color: $primary;
+    }
+    &-img{
+        width: 300px;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(255, 255, 255, 0.171);
+        object-fit: cover;
+    }
+    &-description{
+        font-size: $font-size;
+        color: $primary;
+        width: 350px;
+    }
+}
+// Кнопка
+.btn {
+// Подключаем миксин и передаём основной цвет
+    font-size: $font-size;
+    @include button($primary);
+}
