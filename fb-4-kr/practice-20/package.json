@@ -1,0 +1,13 @@
+{
+  "name": "user-management-api",
+  "version": "1.0.0",
+  "description": "API для управления пользователями с MongoDB",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.22.1",
+    "mongoose": "^8.23.1"
+  }
+}
